@@ -6,9 +6,15 @@ import Home from './pages/Home'
 import Pokedex from './pages/Pokedex'
 import Pokemon from './pages/Pokemon'
 import Footer from './Layout/Footer'
+import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
 
 function App() {
+const nameTrainer = useSelector(state => state.nameTrainer)
+localStorage.setItem("nameTrainer", nameTrainer)
+useEffect(() => {
 
+}, [nameTrainer])
 
   return (
     <div className="App">

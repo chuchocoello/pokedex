@@ -42,3 +42,18 @@ header{
     left: 50%;
     transform: translate(-50%);
 }
+
+.header__logout{
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 300ms color ease;
+    margin-right: 15px;
+    border-radius: 50%;
+
+
+}
+
+.header__circle-int:hover{
+color: red;
+}

@@ -1,10 +1,15 @@
+.pokedex__header{
+    padding: 0 20px;
+
+}
+
+
 .pokedex__form{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 20px;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-left: 10%;
+    gap: 20px;
 }
 
 .pokedex__span{
@@ -20,17 +25,20 @@
 }
 
 .pokedex__input{
-    font-size: 15px;
-    height: 40px;
+    border: none;
+    box-shadow: 0 3px 9px #00000026;
+    padding: 10px 10px;
+
 }
 
 .pokemon__button{
-  
-    background-color: #D93F3F;
+    border: none;
+    padding: 10px 10px;
+    background-color: var(--color-red);
     color: white;
-    height: 40px;
-    width: 191px;
     cursor: pointer;
+    height: 40px;
+    width: 191px; 
     transition: 300ms transform ease;
 }
 
@@ -40,18 +48,11 @@
 }
 
 .pokedex__select{
-    align-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    text-align: center;
     text-transform: capitalize;
-    gap: 10px;
-    display: flex;
-    width: 191px;
-    height: 40px;
-    box-shadow: 2px 2px 2px 1px rgb(241 240 240 / 20%);
-    margin-top: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 0 3px 9px #00000026;
+    padding: 10px 20px;   
 }
 
 .pokedex__search{
@@ -60,4 +61,26 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+}
+.pokedex__listPages{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.pokedex__listPages li{
+    padding: 10px 12px;
+    background-color: red;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+
+}
+.pokedex__listPages li.actualPage{
+    background-color: rgb(146,0,0);
 }

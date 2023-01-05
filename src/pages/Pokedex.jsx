@@ -32,6 +32,34 @@ const handleClickPage = (newPage) => {
   setCurrentPage(newPage)
 }
 
+const handleNextPage = () =>{
+  const newPage = currentPage + 1
+  if(newPage > lastPage){
+    setCurrentPage(1)
+  }else{
+    setCurrentPage(newPage)
+  }
+}
+
+const handlePreviousPage = () => {
+  const newPage = currentPage -1
+  if(newPage <1){
+    setCurrentPage(lastPage)
+  }else{
+    setCurrentPage(newPage)
+  }
+}
+
+const handleFirstPage = () => {
+  setCurrentPage(1)
+}
+
+const handleLastPage = () => {
+  setCurrentPage(lastPage
+    )
+}
+
+
 useEffect(() => {
 const URL = `https://pokeapi.co/api/v2/${pokemonType ? `type/${pokemonType}/` : "pokemon/?limit=100"}`
 axios.get(URL)
@@ -63,7 +91,8 @@ setPokemonsFilter(newPokemons)
 
   return (
     <main>
-      <div>
+      
+      <div className='pokedex__header'>
         <p className='pokedex__text'>Welcome <span className='pokedex__span'>{nameTrainer}</span>, here you can find your favorite pokemon</p>
       <form onSubmit={handleSubmit} className='pokedex__form'>
         <div className='pokedex__search'>
@@ -79,14 +108,25 @@ setPokemonsFilter(newPokemons)
         </select>
       </form>
       </div>
+      <ul className='pokedex__listPages'>
+        <li onClick={handlePreviousPage}>{"<"}</li>
+        <li onClick={handleFirstPage}>...</li>
+        {
+         pagesInBlock.map(pageInBlock => <li className={currentPage == pageInBlock ? "actualPage" : ""} onClick={() => handleClickPage(pageInBlock)} key={pageInBlock}>{pageInBlock}</li>)
+        }
+        <li onClick={handleLastPage}>...</li>
+        <li onClick={handleNextPage}>{">"}</li>
+      </ul>
       <ListPokemons pokemons={pokemonsInPage}/>
 
-      <ul>
-        <li>{"<"}</li>
+      <ul className='pokedex__listPages'>
+        <li onClick={handlePreviousPage}>{"<"}</li>
+        <li onClick={handleFirstPage}>...</li>
         {
-         pagesInBlock.map(pageInBlock => <li onClick={() => handleClickPage(pageInBlock)} key={pageInBlock}>{pageInBlock}</li>)
+         pagesInBlock.map(pageInBlock => <li className={currentPage == pageInBlock ? "actualPage" : ""} onClick={() => handleClickPage(pageInBlock)} key={pageInBlock}>{pageInBlock}</li>)
         }
-        <li>{">"}</li>
+        <li onClick={handleLastPage}>...</li>
+        <li onClick={handleNextPage}>{">"}</li>
       </ul>
 
     </main>
