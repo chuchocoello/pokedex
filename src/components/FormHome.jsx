@@ -11,7 +11,6 @@ e.preventDefault()
 const nameTrainer = e.target.nameTrainer.value.trim()
 dispatch(setNameTrainerGlobal(nameTrainer))
 
-
 }
   return (
 <form className='home__form' onSubmit={handleSubmit}>

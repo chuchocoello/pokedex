@@ -5,7 +5,7 @@ import "./style/Header.css"
 
 const Header = () => {
   const dispatch = useDispatch()
-  const handleClickLogout = () =>{
+  const handleClickLogout = () => {
     dispatch(setNameTrainerGlobal(""))
   }
   return (
@@ -14,13 +14,11 @@ const Header = () => {
       <div className='header__black'></div>
       <div className='header__circle'>
         <div className='header__circle-int' onClick={handleClickLogout}>
-        <i onClick={handleClickLogout}  className='header__logout log-out-circle'>{"<-"} </i>
+          <i onClick={handleClickLogout} className='header__logout log-out-circle'>{"<-"} </i>
         </div>
-
       </div>
-     
     </header>
-  ); 
+  );
 };
 
 export default Header

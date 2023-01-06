@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { Navigate, Outlet } from 'react-router-dom'
 
 const HomeProtected = () => {
+    
     const nameTrainer = useSelector(state => state.nameTrainer)
 
     if (nameTrainer){

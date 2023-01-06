@@ -2,6 +2,7 @@ import React from 'react'
 import "./style/Footer.css"
 
 const Footer = () => {
+
   return (
     <footer className='footer'>
         <div className='footer__black'></div>
@@ -9,7 +10,6 @@ const Footer = () => {
             <div className='footer__circle-int'></div>
 
         </div>
-
     </footer>
   )
 }

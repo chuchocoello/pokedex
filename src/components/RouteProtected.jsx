@@ -4,6 +4,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 import Header from '../Layout/Header'
 
 const RouteProtected = () => {
+    
     const nameTrainer = useSelector(state => state.nameTrainer)
 
     if (nameTrainer) {

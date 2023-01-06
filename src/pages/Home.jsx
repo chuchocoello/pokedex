@@ -4,6 +4,7 @@ import Footer from '../Layout/Footer'
 import "./styles/Home.css"
 
 const Home = () => {
+  
   return (
     <main className='home'>
       <img className='home__img' src="/images/pokedex.png" alt="" />

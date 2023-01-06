@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import "./styles/Pokemon.css"
 
 const Pokemon = () => {
-  const [dataPokemon, setDataPokemon] = useState()
 
+  const [dataPokemon, setDataPokemon] = useState()
   const { id } = useParams()
 
   const getPercentBarProgress = (valueStat) => {

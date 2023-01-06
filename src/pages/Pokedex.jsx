@@ -6,13 +6,12 @@ import { paginationLogic } from '../helpers/paginationLogic'
 import "./styles/Pokedex.css"
 
 const Pokedex = () => {
+
   const [pokemons, setPokemons] = useState([])
   const [pokemonsFilter, setPokemonsFilter] = useState([])
   const [types, setTypes] = useState([])
   const [namePokemon, setNamePokemon] = useState("")
   const [pokemonType, setPokemonType] = useState("")
-
-
 
 const [currentPage, setCurrentPage] = useState(1)
 

@@ -3,6 +3,7 @@ import PokemonCard from './PokemonCard'
 import "./style/ListPokemon.css"
 
 const ListPokemons = ({ pokemons }) => {
+    
     return (
         <section className='listPokemon'>
             {
